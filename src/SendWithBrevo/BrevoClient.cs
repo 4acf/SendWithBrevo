@@ -210,6 +210,7 @@ namespace SendWithBrevo
             else
             {
                 Logger?.Invoke(_Header + "non-success status returned, status " + resp.StatusCode);
+                Logger?.Invoke(_Header + "response body: " + resp.DataAsString);
                 return false;
             }
         }
